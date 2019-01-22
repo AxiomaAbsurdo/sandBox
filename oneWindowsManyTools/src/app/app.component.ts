@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  //@Output() sendMsgToCard = new EventEmitter<void>();
+  userMsg: string;
+
   title = 'oneWindowsManyTools';
+  showInput = false;
+
+  showMsBox(){
+    this.showInput = true;
+  }
+
+
+
 }

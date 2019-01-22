@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-one-panel',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OnePanelComponent implements OnInit {
 
+  @Input() text: string;
+  @Output() callmsgbox = new EventEmitter<void>();
+
+
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  msgBox() {
+    this.callmsgbox.emit();
   }
 
 }

@@ -2,6 +2,11 @@
   <div class="card-body">
     <h5 class="card-title">Acciones disponibles</h5>
     <p class="card-text">Aqui estaran los botones para realizar acciones con este panel</p>
-    <a href="#" class="btn btn-primary">Toggle</a>
+    <button class="btn btn-primary" (click)="msgBox()">Añadir mensaje</button>
+    <p></p>
+    <label class="row col-6">
+      <h6>Este es el mensaje: </h6>
+      {{text}}
+    </label>
   </div>
 </div>
